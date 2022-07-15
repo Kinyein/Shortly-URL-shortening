@@ -1,0 +1,480 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLBT5V1s.ttf) format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  background-color: hsl(225, 33%, 95%);
+}
+body .blueButton {
+  background-color: hsl(180, 66%, 49%);
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s;
+  border-radius: 100px;
+  width: 7em;
+}
+body .blueButton:hover {
+  color: white;
+  background-color: hsl(180, 63%, 69%);
+}
+body .blueButton:focus {
+  color: white;
+}
+body nav.navbar {
+  font-weight: bold;
+  padding: 0 7%;
+}
+body nav.navbar .navbar-brand a {
+  font-size: 30px;
+  color: black;
+}
+body nav.navbar .navbar-brand a:hover {
+  color: black;
+}
+@media screen and (max-width: 1024px) {
+  body nav.navbar .navbar-menu {
+    background-color: hsl(257, 27%, 26%);
+    border-radius: 8px;
+    text-align: center;
+  }
+  body nav.navbar .navbar-menu .navbar-start a {
+    color: white;
+  }
+  body nav.navbar .navbar-menu hr.division {
+    height: 1px;
+    margin: 20px auto 10px auto;
+    background-color: hsl(257, 7%, 63%);
+    width: 87%;
+  }
+  body nav.navbar .navbar-menu .navbar-end .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body nav.navbar .navbar-menu .navbar-end .buttons button {
+    color: white;
+    width: 100%;
+  }
+}
+body nav.navbar .navbar-menu a {
+  color: hsl(257, 7%, 63%);
+}
+body nav.navbar .navbar-menu a:hover {
+  color: black;
+}
+body nav.navbar .navbar-end .buttons .loginButton {
+  border: none;
+  color: hsl(257, 7%, 63%);
+  font-weight: bold;
+  border-radius: 100px;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.5s;
+}
+body nav.navbar .navbar-end .buttons .loginButton:hover {
+  color: white;
+  background-color: hsl(180, 63%, 69%);
+}
+body main.main div.getStarted {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 3em 7% 6.5em 7%;
+  font-weight: bold;
+}
+@media (max-width: 1433px) {
+  body main.main div.getStarted {
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+  }
+}
+body main.main div.getStarted img {
+  height: auto;
+}
+body main.main div.getStarted div.text {
+  width: 30em;
+}
+body main.main div.getStarted div.text h1 {
+  font-size: 4.3em;
+  line-height: 100%;
+  font-weight: bold;
+}
+@media screen and (max-width: 520px) {
+  body main.main div.getStarted div.text h1 {
+    font-size: 2em;
+  }
+}
+body main.main div.getStarted div.text p {
+  color: hsl(257, 7%, 63%);
+  font-size: 1.3em;
+}
+@media screen and (max-width: 520px) {
+  body main.main div.getStarted div.text p {
+    font-size: 1em;
+  }
+}
+body main.main div.getStarted div.text .getStartedButton {
+  margin: 10px 0;
+  width: 9em;
+}
+body main.main div.shorter {
+  padding: 2.5% 3%;
+  margin: 0 7%;
+  transform: translateY(-63px);
+  border-radius: 8px;
+  background-image: url(images/bg-shorten-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsl(257, 27%, 26%);
+}
+@media screen and (max-width: 750px) {
+  body main.main div.shorter {
+    padding: 5% 6%;
+    background-image: url(images/bg-shorten-mobile.svg);
+  }
+}
+body main.main div.shorter form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+body main.main div.shorter form input {
+  width: 85%;
+  padding: 15px 24px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+@media screen and (max-width: 1416px) {
+  body main.main div.shorter form input {
+    width: 100%;
+  }
+}
+body main.main div.shorter form input::placeholder {
+  color: hsl(257, 7%, 63%);
+  font-size: 16px;
+}
+body main.main div.shorter form input:invalid {
+  border: 2px solid #f74f4f;
+}
+body main.main div.shorter form input:valid {
+  border: none;
+}
+body main.main div.shorter form input.valid {
+  border: none;
+}
+body main.main div.shorter form input.invalid {
+  border: 2px solid #f74f4f;
+}
+body main.main div.shorter form input.invalid::placeholder {
+  color: #f74f4f;
+}
+body main.main div.shorter form .invalidUrl {
+  display: none;
+  position: absolute;
+  font-style: italic;
+  left: 4%;
+  bottom: 10px;
+  color: #f74f4f;
+}
+@media screen and (max-width: 1416px) {
+  body main.main div.shorter form .invalidUrl {
+    bottom: 43%;
+  }
+}
+@media screen and (max-width: 750px) {
+  body main.main div.shorter form .invalidUrl {
+    left: 7%;
+  }
+}
+body main.main div.shorter form button {
+  width: 150px;
+  height: 3em;
+  border-radius: 8px;
+  color: white;
+  background-color: hsl(180, 66%, 49%);
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  transition: background-color 0.3s;
+}
+body main.main div.shorter form button:hover {
+  cursor: pointer;
+  background-color: hsl(180, 63%, 69%);
+}
+@media screen and (max-width: 1416px) {
+  body main.main div.shorter form button {
+    width: 100%;
+  }
+}
+body main.main div.shortenedLinks {
+  margin: 0 7%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+body main.main div.shortenedLinks div.link {
+  background-color: white;
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 4px;
+}
+body main.main div.shortenedLinks div.link p.linkItroduced {
+  font-weight: bold;
+  word-break: break-all;
+  margin: 0 1.7em;
+}
+body main.main div.shortenedLinks div.link hr.divisionLink {
+  background-color: hsl(0, 0%, 75%);
+  display: none;
+  padding: 1px;
+  width: 100%;
+  margin: 1em 0;
+}
+@media screen and (max-width: 1000px) {
+  body main.main div.shortenedLinks div.link hr.divisionLink {
+    display: block;
+  }
+}
+body main.main div.shortenedLinks div.link div.shortenedLink {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  flex-wrap: wrap;
+  margin: 0 1.7em;
+}
+@media screen and (max-width: 1000px) {
+  body main.main div.shortenedLinks div.link div.shortenedLink {
+    width: 100%;
+  }
+}
+body main.main div.shortenedLinks div.link div.shortenedLink p {
+  color: hsl(180, 66%, 49%);
+  font-weight: bold;
+}
+body main.main div.shortenedLinks div.link div.shortenedLink button.copyButton {
+  background-color: hsl(180, 66%, 49%);
+  padding: 0.8em 2em;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+}
+@media screen and (max-width: 1000px) {
+  body main.main div.shortenedLinks div.link div.shortenedLink button.copyButton {
+    width: 100%;
+  }
+}
+body main.main div.statistics {
+  padding: 0 7%;
+  font-weight: bold;
+  margin: 6% 0 20% 0;
+}
+body main.main div.statistics div.textStatistics {
+  text-align: center;
+}
+body main.main div.statistics div.textStatistics h3 {
+  font-size: 3em;
+  font-weight: bold;
+}
+@media screen and (max-width: 510px) {
+  body main.main div.statistics div.textStatistics h3 {
+    font-size: 1.5em;
+  }
+}
+body main.main div.statistics div.textStatistics p {
+  margin: 1.7em auto;
+  font-size: 1.2em;
+  max-width: 29em;
+  color: hsl(257, 7%, 63%);
+}
+@media screen and (max-width: 510px) {
+  body main.main div.statistics div.textStatistics p {
+    font-size: 0.85em;
+  }
+}
+body main.main div.statistics div.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  margin: 5em 0;
+}
+@media screen and (max-width: 952px) {
+  body main.main div.statistics div.cards {
+    gap: 3em;
+  }
+}
+body main.main div.statistics div.cards .card {
+  height: auto;
+  max-width: 400px;
+  padding: 2em 1.7em;
+  border-radius: 8px;
+  z-index: 2;
+}
+@media screen and (max-width: 952px) {
+  body main.main div.statistics div.cards .card {
+    text-align: center;
+  }
+}
+body main.main div.statistics div.cards .card .bgImg {
+  background-color: hsl(257, 27%, 26%);
+  width: 5em;
+  height: 5em;
+  padding: 1em;
+  border-radius: 50%;
+  margin: -4.3em 0 1em 0;
+}
+@media screen and (max-width: 952px) {
+  body main.main div.statistics div.cards .card .bgImg {
+    margin: -4.3em auto 1em auto;
+  }
+}
+body main.main div.statistics div.cards .card .bgImg img {
+  width: 100%;
+}
+body main.main div.statistics div.cards .card strong {
+  font-size: 1.4em;
+}
+body main.main div.statistics div.cards .card p {
+  color: hsl(257, 7%, 63%);
+  font-size: 1.2em;
+  margin-top: 4%;
+}
+body main.main div.statistics div.cards .card:nth-child(2) {
+  transform: translateY(3em);
+}
+body main.main div.statistics div.cards .card:nth-child(3) {
+  transform: translateY(6em);
+}
+body main.main div.statistics div.cards span.line {
+  background-color: hsl(180, 66%, 49%);
+  width: 100%;
+  max-width: 800px;
+  padding: 2px;
+  height: 0;
+  transform: translateY(-9em);
+  z-index: 1;
+}
+@media screen and (max-width: 1470px) {
+  body main.main div.statistics div.cards span.line {
+    display: none;
+  }
+}
+@media screen and (max-width: 968px) {
+  body main.main div.statistics div.cards span.line {
+    display: block;
+    transform: translateY(13em);
+    position: absolute;
+    width: 0;
+    height: 100%;
+    max-height: 700px;
+  }
+}
+body main.main div.boost {
+  background-image: url(images/bg-boost-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsl(257, 27%, 26%);
+  height: 12em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 750px) {
+  body main.main div.boost {
+    margin-top: 10em;
+    background-image: url(images/bg-boost-mobile.svg);
+  }
+}
+body main.main div.boost h3 {
+  color: white;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+@media screen and (max-width: 450px) {
+  body main.main div.boost h3 {
+    font-size: 1.5em;
+  }
+}
+body main.main div.boost button {
+  width: 11em;
+  font-size: 1.1em;
+}
+body footer.footer {
+  background-color: hsl(260, 8%, 14%);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2em;
+  padding: 4% 7%;
+}
+@media screen and (max-width: 1075px) {
+  body footer.footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+body footer.footer a.shortly {
+  color: white;
+  font-size: 2.3em;
+  font-weight: bold;
+  position: relative;
+}
+body footer.footer ul {
+  font-size: 1.1em;
+  margin: 0 4em;
+}
+body footer.footer ul li:first-child {
+  margin-bottom: 20px;
+}
+body footer.footer ul li strong,
+body footer.footer ul li a {
+  color: white;
+}
+body footer.footer ul li a:hover {
+  color: hsl(180, 66%, 49%);
+}
+body footer.footer div.socialIcons {
+  margin: 0 2em 2em 2em;
+  font-size: 1.7em;
+  display: flex;
+  gap: 20px;
+}
+body footer.footer div.socialIcons a {
+  color: white;
+  transition: transform 0.3s;
+}
+body footer.footer div.socialIcons a:hover {
+  color: hsl(180, 66%, 49%);
+  transform: scale(1.1);
+}

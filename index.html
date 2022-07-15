@@ -6,57 +6,56 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="./images/favicon-32x32.png" />
 
-        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./styles.css" />
 
-        <!-- Bootstrap -->
+        <!-- Bulma -->
+
         <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
             rel="stylesheet"
-            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-            crossorigin="anonymous"
+            href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
         />
+
         <title>Shortly</title>
     </head>
     <body>
         <header class="header">
-            <nav class="navbar navbar-expand-lg bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Shortly</a>
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav"
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="https://bulma.io">Shortly</a>
+
+                    <a
+                        role="button"
+                        class="navbar-burger"
+                        data-target="navMenu"
+                        aria-label="menu"
                         aria-expanded="false"
-                        aria-label="Toggle navigation"
                     >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#features"
-                                    >Features</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#pricing">Pricing</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#resources"
-                                    >Resources</a
-                                >
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <button class="loginButton">Login</button>
-                            </li>
-                            <li class="nav-item">
-                                <button class="signUpButton">Sing Up</button>
-                            </li>
-                        </ul>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div class="navbar-menu" id="navMenu">
+                    <div class="navbar-start">
+                        <a href="#features" class="navbar-item"> Features </a>
+                        <a href="#pricing" class="navbar-item"> Pricing </a>
+                        <a href="#resources" class="navbar-item"> Resources </a>
+                    </div>
+
+                    <hr class="division">
+
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="buttons">
+                                <button class="button loginButton">
+                                    Login
+                                </button>
+                                <button class="button signUpButton blueButton">
+                                    Sign Up
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -73,94 +72,153 @@
                         on how your links are performing.
                     </p>
 
-                    <button class="getStartedButton">Get Started</button>
+                    <button class="getStartedButton button blueButton">
+                        Get Started
+                    </button>
                 </div>
             </div>
 
             <div class="shorter">
-                <form>
-                    <input type="url" placeholder="Shorten a link here..." />
-
+                <form id="form" autocomplete="off">
+                    <input id="urlInput" placeholder="Shorten a link here..."/>
                     <button>Shorten It!</button>
+                    <p class="invalidUrl">Please add a link</p>
                 </form>
+
             </div>
 
-            <div class="statistics">
-                <h3>Advanced Statistics</h3>
+            <div class="shortenedLinks" id="shortenedLinks">
+                <div class="link">
+                    <p class="linkItroduced">https://www.youtube.com/watch?v=XyjMQhUoWjQ</p>
 
-                <p>
-                    Track how your links are performing across the web with our
-                    advanced statistics dashboard.
-                </p>
+                    <hr class="divisionLink">
+
+                    <div class="shortenedLink">
+                        <p >https:/rel.ink/k4lKyk</p>
+
+                        <button id="https:/rel.ink/k4lKyk" class="copyButton">Copy</button>
+                    </div>
+                </div>
+
+                <div class="link">
+                    <p class="linkItroduced">https://www3.animeflv.net/ver/kaguyasama-wa-kokurasetai-ultra-romantic-7</p>
+
+                    <hr class="divisionLink">
+
+                    <div class="shortenedLink">
+                        <p id="link">https:/rel.ink/k2uKyk</p>
+
+                        <button id="https:/rel.ink/k2uKyk" class="copyButton">Copy</button>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="statistics" id="features">
+                <div class="textStatistics">
+                    <h3>Advanced Statistics</h3>
+
+                    <p>
+                        Track how your links are performing across the web with
+                        our advanced statistics dashboard.
+                    </p>
+                </div>
 
                 <div class="cards">
                     <div class="card brandRecognition">
-                        <img src="./images/icon-brand-recognition.svg" alt="" />
+                        <div class="bgImg">
+                            <img
+                                src="./images/icon-brand-recognition.svg"
+                                alt=""
+                            />
+                        </div>
+
                         <strong>Brand Recognition</strong>
-                        <p>Boost your brand recognition with each click. Generic links don’t 
-                            mean a thing. Branded links help instil confidence in your content.</p>
+                        <p>
+                            Boost your brand recognition with each click.
+                            Generic links don’t mean a thing. Branded links help
+                            instil confidence in your content.
+                        </p>
                     </div>
                     <div class="card detailedRecords">
-                        <img src="./images/icon-detailed-records.svg" alt="" />
+                        <div class="bgImg">
+                            <img
+                                src="./images/icon-detailed-records.svg"
+                                alt="logo"
+                            />
+                        </div>
                         <strong>Detailed Records</strong>
-                        <p>Gain insights into who is clicking your links. Knowing when and where 
-                            people engage with your content helps inform better decisions.</p>
+                        <p>
+                            Gain insights into who is clicking your links.
+                            Knowing when and where people engage with your
+                            content helps inform better decisions.
+                        </p>
                     </div>
                     <div class="card fullyCustomizable">
-                        <img src="./images/icon-fully-customizable.svg" alt="" />
+                        <div class="bgImg">
+                            <img
+                                src="./images/icon-fully-customizable.svg"
+                                alt=""
+                            />
+                        </div>
                         <strong>Fully CUstomizable</strong>
-                        <p>Improve brand awareness and content discoverability through customizable 
-                            links, supercharging audience engagement.</p>
+                        <p>
+                            Improve brand awareness and content discoverability
+                            through customizable links, supercharging audience
+                            engagement.
+                        </p>
                     </div>
+
+                    <span class="line"></span>
                 </div>
             </div>
 
-            <div>
+            <div class="boost">
                 <h3>Boost your links today</h3>
-                
-                <button class="getStartedButton">Get Started</button>
+
+                <button onclick='scrollUp(0, -1)' class="getStartedButton button blueButton">
+                    Get Started
+                </button>
             </div>
         </main>
 
-        <footer class="footer">
-            <a href="#">Shortly</a>
+        <footer class="footer" id="resources">
+            <a class="shortly" href="#">Shortly</a>
 
-            <ul>
-                <li><strong>Features</strong></li>
-                <li><a href="">Link Shortening</a></li>
-                <li><a href="">Branded Links</a></li>
-                <li><a href="">Analytics</a></li>
-            </ul>
-            <ul>
-                <li><strong>Resources</strong></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Developers</a></li>
-                <li><a href="">Support</a></li>
-            </ul>
-            <ul>
-                <li><strong>Company</strong></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Out Team</a></li>
-                <li><a href="">Careers</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-
-            <div class="socialIcons">
-                <i class="fa-brands fa-facebook-square"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-pinterest"></i>
-                <i class="fa-brands fa-instagram"></i>
-            </div>
+                <ul>
+                    <li><strong>Features</strong></li>
+                    <li><a href="">Link Shortening</a></li>
+                    <li><a href="">Branded Links</a></li>
+                    <li><a href="">Analytics</a></li>
+                </ul>
+                <ul>
+                    <li><strong>Resources</strong></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Developers</a></li>
+                    <li><a href="">Support</a></li>
+                </ul>
+                <ul>
+                    <li><strong>Company</strong></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Out Team</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+    
+                <div class="socialIcons">
+                    <a href=""><i class="fa-brands fa-facebook-square"></i></a> 
+                    <a href=""><i class="fa-brands fa-twitter"></i></a> 
+                    <a href=""><i class="fa-brands fa-pinterest"></i></a> 
+                    <a href=""><i class="fa-brands fa-instagram"></i></a> 
+                </div>
         </footer>
 
-        <!-- Bootstrap -->
+        <!-- FontAwesome (icons) -->
         <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            src="https://kit.fontawesome.com/93cc0313c5.js"
             crossorigin="anonymous"
         ></script>
 
-        <!-- FontAwesome (icons) -->
-        <script src="https://kit.fontawesome.com/93cc0313c5.js" crossorigin="anonymous"></script>
+        <script src="./script.js"></script>
     </body>
 </html>

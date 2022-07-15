@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap');
+
+@LightGray: hsl(225, 33%, 95%);
+@Cyan: hsl(180, 66%, 49%);
+@LightBlue: hsl(180, 63%, 69%);
+@DarkViolet: hsl(257, 27%, 26%);
+@Gray: hsl(0, 0%, 75%);
+@GrayishViolet: hsl(257, 7%, 63%);
+@VeryDarkBlue: hsl(255, 11%, 22%);
+@VeryDarkViolet: hsl(260, 8%, 14%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    background-color: @LightGray;
+
+    .blueButton {
+        background-color: @Cyan;
+        color: white;
+        font-weight: bold;
+        border: none;
+        transition: background-color .3s;
+        border-radius: 100px;
+        width: 7em;
+    }
+
+    .blueButton:hover {
+        color: white;
+        background-color: @LightBlue;
+    }
+
+    .blueButton:focus {
+        color: white;
+    }
+
+    nav.navbar {
+        font-weight: bold;
+        padding: 0 7%;
+
+        .navbar-brand a {
+            font-size: 30px;
+            color: black;
+        }
+
+        .navbar-brand a:hover {
+            color: black;
+        }
+
+        .navbar-menu {
+
+            @media screen and (max-width: 1024px) {
+                background-color: @DarkViolet;
+                border-radius: 8px;
+                text-align: center;
+
+                .navbar-start {
+                    a {
+                        color: white;
+                    }
+                }
+
+                hr.division {
+                    height: 1px;
+                    margin: 20px auto 10px auto;
+                    background-color: @GrayishViolet;
+                    width: 87%;
+                }
+
+                .navbar-end {
+                    .buttons {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        button {
+                            color: white;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .navbar-menu a {
+            color: @GrayishViolet;
+        }
+
+        .navbar-menu a:hover {
+            color: black;
+        }
+
+        .navbar-end {
+            .buttons {
+
+                .loginButton {
+                    border: none;
+                    color: @GrayishViolet;
+                    font-weight: bold;
+                    border-radius: 100px;
+                    background-color: transparent;
+                    transition: background-color .3s, color .5s;
+                }
+
+                .loginButton:hover {
+                    color: white;
+                    background-color: @LightBlue;
+                }
+            }
+        }
+    }
+
+    main.main {
+
+        div.getStarted {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: white;
+            padding: 3em 7% 6.5em 7%;
+            font-weight: bold;
+
+            @media (max-width: 1433px) {
+                justify-content: center;
+                gap: 30px;
+                text-align: center;
+            }
+
+            img {
+                height: auto;
+            }
+
+            div.text {
+                width: 30em;
+
+                h1 {
+                    font-size: 4.3em;
+                    line-height: 100%;
+                    font-weight: bold;
+
+                    @media screen and (max-width: 520px) {
+                        font-size: 2em;
+                    }
+                }
+
+                p {
+                    color: @GrayishViolet;
+                    font-size: 1.3em;
+
+                    @media screen and (max-width: 520px) {
+                        font-size: 1em;
+                    }
+                }
+
+                .getStartedButton {
+                    margin: 10px 0;
+                    width: 9em;
+                }
+            }
+        }
+
+        div.shorter {
+            background-color: @DarkViolet;
+            padding: 2.5% 3%;
+            margin: 0 7%;
+            transform: translateY(-63px);
+            border-radius: 8px;
+            background-image: url(./images/bg-shorten-desktop.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: @DarkViolet;
+
+            @media screen and (max-width: 750px) {
+                padding: 5% 6%;
+                background-image: url(./images/bg-shorten-mobile.svg);
+            }
+
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 25px;
+                justify-content: center;
+
+                input {
+                    width: 85%;
+                    padding: 15px 24px;
+                    border-radius: 8px;
+                    border: none;
+                    outline: none;
+
+                    @media screen and (max-width: 1416px) {
+                        width: 100%;
+                    }
+                }
+
+                input::placeholder {
+                    color: @GrayishViolet;
+                    font-size: 16px;
+                }
+
+                input:invalid {
+                    border: 2px solid rgb(247, 79, 79);
+                }
+
+                input:valid {
+                    border: none;
+                }
+
+                input.valid {
+                    border: none;
+                }
+
+                input.invalid {
+                    border: 2px solid rgb(247, 79, 79);
+                }
+
+                input.invalid::placeholder {
+                    color: rgb(247, 79, 79);
+                }
+
+                .invalidUrl {
+                    display: none;
+                    position: absolute;
+                    font-style: italic;
+                    left: 4%;
+                    bottom: 10px;
+                    color: rgb(247, 79, 79);
+
+                    @media screen and (max-width: 1416px) {
+                        bottom: 43%;
+                    }
+
+                    @media screen and (max-width: 750px) {
+                        left: 7%;
+                    }
+                }
+
+                button {
+                    width: 150px;
+                    height: 3em;
+                    border-radius: 8px;
+                    color: white;
+                    background-color: @Cyan;
+                    font-weight: bold;
+                    font-size: 1em;
+                    border: none;
+                    transition: background-color .3s;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: @LightBlue;
+                    }
+
+                    @media screen and (max-width: 1416px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        div.shortenedLinks {
+            margin: 0 7%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+
+            div.link {
+                background-color: white;
+                padding: 1em 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                // gap: 1em;
+                flex-wrap: wrap;
+                border-radius: 4px;
+
+                p.linkItroduced {
+                    font-weight: bold;
+                    word-break: break-all;
+                    margin: 0 1.7em;
+                }
+
+                hr.divisionLink {
+                    background-color: @Gray;
+                    display: none;
+                    padding: 1px;
+                    width: 100%;
+                    margin: 1em 0;
+
+                    @media screen and (max-width: 1000px) {
+                        display: block;
+                    }
+                }
+
+                div.shortenedLink {
+                    display: flex;
+                    align-items: center;
+                    gap: 1.5em;
+                    flex-wrap: wrap;
+                    margin: 0 1.7em;
+
+                    @media screen and (max-width: 1000px) {
+                        width: 100%;
+                    }
+
+                    p {
+                        color: @Cyan;
+                        font-weight: bold;
+                    }
+
+                    button.copyButton {
+                        background-color: @Cyan;
+                        padding: .8em 2em;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 1em;
+                        border: none;
+                        border-radius: 4px;
+
+                        @media screen and (max-width: 1000px) {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        div.statistics {
+            padding: 0 7%;
+            font-weight: bold;
+            margin: 6% 0 20% 0;
+
+            div.textStatistics {
+                text-align: center;
+
+                h3 {
+                    font-size: 3em;
+                    font-weight: bold;
+
+                    @media screen and (max-width: 510px) {
+                        font-size: 1.5em;
+                    }
+                }
+
+                p {
+                    margin: 1.7em auto;
+                    font-size: 1.2em;
+                    max-width: 29em;
+                    color: @GrayishViolet;
+
+                    @media screen and (max-width: 510px) {
+                        font-size: .85em;
+                    }
+                }
+            }
+
+            div.cards {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 2em;
+                margin: 5em 0;
+
+                @media screen and (max-width: 952px) {
+                    gap: 3em;
+                }
+
+                .card {
+                    height: auto;
+                    max-width: 400px;
+                    padding: 2em 1.7em;
+                    border-radius: 8px;
+                    z-index: 2;
+
+                    @media screen and (max-width: 952px) {
+                        text-align: center;
+                    }
+
+                    .bgImg {
+                        background-color: @DarkViolet;
+                        width: 5em;
+                        height: 5em;
+                        padding: 1em;
+                        border-radius: 50%;
+                        margin: -4.3em 0 1em 0;
+                        // transform: translateY(-4.3em);
+
+                        @media screen and (max-width: 952px) {
+                            margin: -4.3em auto 1em auto;
+                        }
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    strong {
+                        font-size: 1.4em;
+                    }
+
+                    p {
+                        color: @GrayishViolet;
+                        font-size: 1.2em;
+                        margin-top: 4%;
+                    }
+                }
+
+                .card:nth-child(2) {
+                    transform: translateY(3em);
+                }
+
+                .card:nth-child(3) {
+                    transform: translateY(6em);
+                }
+
+                span.line {
+                    background-color: @Cyan;
+                    width: 100%;
+                    max-width: 800px;
+                    padding: 2px;
+                    height: 0;
+                    transform: translateY(-9em);
+                    z-index: 1;
+
+                    @media screen and (max-width: 1470px) {
+                        display: none;
+                    }
+
+                    @media screen and (max-width: 968px) {
+                        display: block;
+                        transform: translateY(13em);
+                        position: absolute;
+                        width: 0;
+                        height: 100%;
+                        max-height: 700px;
+                    }
+                }
+            }
+
+        }
+
+        div.boost {
+            background-image: url(./images/bg-boost-desktop.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: @DarkViolet;
+            height: 12em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            @media screen and (max-width: 750px) {
+                margin-top: 10em;
+                background-image: url(./images/bg-boost-mobile.svg);
+            }
+
+            h3 {
+                color: white;
+                font-size: 2.5em;
+                font-weight: bold;
+
+                @media screen and (max-width: 450px) {
+                    font-size: 1.5em;
+                }
+            }
+
+            button {
+                width: 11em;
+                font-size: 1.1em;
+            }
+        }
+    }
+
+    footer.footer {
+        background-color: @VeryDarkViolet;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 2em;
+        padding: 4% 7%;
+
+        @media screen and (max-width: 1075px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        a.shortly {
+            color: white;
+            font-size: 2.3em;
+            font-weight: bold;
+            position: relative;
+        }
+
+        ul {
+            font-size: 1.1em;
+            margin: 0 4em;
+
+            li:first-child {
+                margin-bottom: 20px;
+            }
+
+            li {
+
+                strong,
+                a {
+                    color: white;
+                }
+
+                a:hover {
+                    color: @Cyan;
+                }
+            }
+        }
+
+        div.socialIcons {
+            margin: 0 2em 2em 2em;
+            font-size: 1.7em;
+            display: flex;
+            gap: 20px;
+
+            a {
+                color: white;
+                transition: transform .3s;
+            }
+
+            a:hover {
+                color: @Cyan;
+                transform: scale(1.1);
+            }
+        }
+
+    }
+
+}

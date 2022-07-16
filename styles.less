@@ -28,16 +28,20 @@ body {
         transition: background-color .3s;
         border-radius: 100px;
         width: 7em;
+
+        &:hover {
+            color: white;
+            background-color: @LightBlue;
+        }
+
+        &:focus {
+            color: white;
+        }
     }
 
-    .blueButton:hover {
-        color: white;
-        background-color: @LightBlue;
-    }
+    
+    
 
-    .blueButton:focus {
-        color: white;
-    }
 
     nav.navbar {
         font-weight: bold;
@@ -106,12 +110,13 @@ body {
                     border-radius: 100px;
                     background-color: transparent;
                     transition: background-color .3s, color .5s;
+
+                    &:hover {
+                        color: white;
+                        background-color: @LightBlue;
+                    }
                 }
 
-                .loginButton:hover {
-                    color: white;
-                    background-color: @LightBlue;
-                }
             }
         }
     }
@@ -128,7 +133,7 @@ body {
             padding: 3em 7% 6.5em 7%;
             font-weight: bold;
 
-            @media (max-width: 1433px) {
+            @media (max-width: 1063px) {
                 justify-content: center;
                 gap: 30px;
                 text-align: center;
@@ -136,10 +141,18 @@ body {
 
             img {
                 height: auto;
+                width: 50%;
+
+                @media screen and (max-width: 1063px) {
+                    width: 100%;
+                }
             }
 
             div.text {
-                width: 30em;
+                width: 40%;
+                @media screen and (max-width: 1063px) {
+                    width: 100%;
+                }
 
                 h1 {
                     font-size: 4.3em;
@@ -196,7 +209,7 @@ body {
                     border: none;
                     outline: none;
 
-                    @media screen and (max-width: 1416px) {
+                    @media screen and (max-width: 1458px) {
                         width: 100%;
                     }
                 }
@@ -234,7 +247,7 @@ body {
                     bottom: 10px;
                     color: rgb(247, 79, 79);
 
-                    @media screen and (max-width: 1416px) {
+                    @media screen and (max-width: 1458px) {
                         bottom: 43%;
                     }
 
@@ -259,7 +272,7 @@ body {
                         background-color: @LightBlue;
                     }
 
-                    @media screen and (max-width: 1416px) {
+                    @media screen and (max-width: 1458px) {
                         width: 100%;
                     }
                 }
@@ -295,7 +308,7 @@ body {
                     width: 100%;
                     margin: 1em 0;
 
-                    @media screen and (max-width: 1000px) {
+                    @media screen and (max-width: 1063px) {
                         display: block;
                     }
                 }
@@ -307,7 +320,7 @@ body {
                     flex-wrap: wrap;
                     margin: 0 1.7em;
 
-                    @media screen and (max-width: 1000px) {
+                    @media screen and (max-width: 1063px) {
                         width: 100%;
                     }
 
@@ -321,12 +334,18 @@ body {
                         padding: .8em 2em;
                         color: white;
                         font-weight: bold;
-                        font-size: 1em;
+                        font-size: 1.1em;
                         border: none;
                         border-radius: 4px;
+                        transition: background-color .3s;
 
-                        @media screen and (max-width: 1000px) {
+                        @media screen and (max-width: 1063px) {
                             width: 100%;
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: @LightBlue;
                         }
                     }
                 }
@@ -369,19 +388,23 @@ body {
                 gap: 2em;
                 margin: 5em 0;
 
-                @media screen and (max-width: 952px) {
+                @media screen and (max-width: 1063px) {
                     gap: 3em;
+                    flex-direction: column;
+                    align-items: center;
                 }
 
                 .card {
                     height: auto;
-                    max-width: 400px;
+                    width: 31%;
+                    // max-width: 33%;
                     padding: 2em 1.7em;
                     border-radius: 8px;
                     z-index: 2;
 
-                    @media screen and (max-width: 952px) {
+                    @media screen and (max-width: 1063px) {
                         text-align: center;
+                        width: 100%;
                     }
 
                     .bgImg {
@@ -393,7 +416,7 @@ body {
                         margin: -4.3em 0 1em 0;
                         // transform: translateY(-4.3em);
 
-                        @media screen and (max-width: 952px) {
+                        @media screen and (max-width: 1063px) {
                             margin: -4.3em auto 1em auto;
                         }
 
@@ -430,13 +453,13 @@ body {
                     transform: translateY(-9em);
                     z-index: 1;
 
-                    @media screen and (max-width: 1470px) {
-                        display: none;
+                    @media screen and (max-width: 1063px) {
+                        // display: none;
                     }
 
-                    @media screen and (max-width: 968px) {
+                    @media screen and (max-width: 1063px) {
                         display: block;
-                        transform: translateY(13em);
+                        transform: translateY(6em);
                         position: absolute;
                         width: 0;
                         height: 100%;
@@ -531,12 +554,13 @@ body {
             a {
                 color: white;
                 transition: transform .3s;
+
+                &:hover {
+                    color: @Cyan;
+                    transform: scale(1.1);
+                }
             }
 
-            a:hover {
-                color: @Cyan;
-                transform: scale(1.1);
-            }
         }
 
     }

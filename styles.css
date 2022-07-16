@@ -102,7 +102,7 @@ body main.main div.getStarted {
   padding: 3em 7% 6.5em 7%;
   font-weight: bold;
 }
-@media (max-width: 1433px) {
+@media (max-width: 1063px) {
   body main.main div.getStarted {
     justify-content: center;
     gap: 30px;
@@ -111,9 +111,20 @@ body main.main div.getStarted {
 }
 body main.main div.getStarted img {
   height: auto;
+  width: 50%;
+}
+@media screen and (max-width: 1063px) {
+  body main.main div.getStarted img {
+    width: 100%;
+  }
 }
 body main.main div.getStarted div.text {
-  width: 30em;
+  width: 40%;
+}
+@media screen and (max-width: 1063px) {
+  body main.main div.getStarted div.text {
+    width: 100%;
+  }
 }
 body main.main div.getStarted div.text h1 {
   font-size: 4.3em;
@@ -167,7 +178,7 @@ body main.main div.shorter form input {
   border: none;
   outline: none;
 }
-@media screen and (max-width: 1416px) {
+@media screen and (max-width: 1458px) {
   body main.main div.shorter form input {
     width: 100%;
   }
@@ -199,7 +210,7 @@ body main.main div.shorter form .invalidUrl {
   bottom: 10px;
   color: #f74f4f;
 }
-@media screen and (max-width: 1416px) {
+@media screen and (max-width: 1458px) {
   body main.main div.shorter form .invalidUrl {
     bottom: 43%;
   }
@@ -224,7 +235,7 @@ body main.main div.shorter form button:hover {
   cursor: pointer;
   background-color: hsl(180, 63%, 69%);
 }
-@media screen and (max-width: 1416px) {
+@media screen and (max-width: 1458px) {
   body main.main div.shorter form button {
     width: 100%;
   }
@@ -256,7 +267,7 @@ body main.main div.shortenedLinks div.link hr.divisionLink {
   width: 100%;
   margin: 1em 0;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1063px) {
   body main.main div.shortenedLinks div.link hr.divisionLink {
     display: block;
   }
@@ -268,7 +279,7 @@ body main.main div.shortenedLinks div.link div.shortenedLink {
   flex-wrap: wrap;
   margin: 0 1.7em;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1063px) {
   body main.main div.shortenedLinks div.link div.shortenedLink {
     width: 100%;
   }
@@ -282,14 +293,19 @@ body main.main div.shortenedLinks div.link div.shortenedLink button.copyButton {
   padding: 0.8em 2em;
   color: white;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.1em;
   border: none;
   border-radius: 4px;
+  transition: background-color 0.3s;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1063px) {
   body main.main div.shortenedLinks div.link div.shortenedLink button.copyButton {
     width: 100%;
   }
+}
+body main.main div.shortenedLinks div.link div.shortenedLink button.copyButton:hover {
+  cursor: pointer;
+  background-color: hsl(180, 63%, 69%);
 }
 body main.main div.statistics {
   padding: 0 7%;
@@ -326,21 +342,24 @@ body main.main div.statistics div.cards {
   gap: 2em;
   margin: 5em 0;
 }
-@media screen and (max-width: 952px) {
+@media screen and (max-width: 1063px) {
   body main.main div.statistics div.cards {
     gap: 3em;
+    flex-direction: column;
+    align-items: center;
   }
 }
 body main.main div.statistics div.cards .card {
   height: auto;
-  max-width: 400px;
+  width: 31%;
   padding: 2em 1.7em;
   border-radius: 8px;
   z-index: 2;
 }
-@media screen and (max-width: 952px) {
+@media screen and (max-width: 1063px) {
   body main.main div.statistics div.cards .card {
     text-align: center;
+    width: 100%;
   }
 }
 body main.main div.statistics div.cards .card .bgImg {
@@ -351,7 +370,7 @@ body main.main div.statistics div.cards .card .bgImg {
   border-radius: 50%;
   margin: -4.3em 0 1em 0;
 }
-@media screen and (max-width: 952px) {
+@media screen and (max-width: 1063px) {
   body main.main div.statistics div.cards .card .bgImg {
     margin: -4.3em auto 1em auto;
   }
@@ -382,15 +401,12 @@ body main.main div.statistics div.cards span.line {
   transform: translateY(-9em);
   z-index: 1;
 }
-@media screen and (max-width: 1470px) {
-  body main.main div.statistics div.cards span.line {
-    display: none;
-  }
+@media screen and (max-width: 1063px) {
 }
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 1063px) {
   body main.main div.statistics div.cards span.line {
     display: block;
-    transform: translateY(13em);
+    transform: translateY(6em);
     position: absolute;
     width: 0;
     height: 100%;

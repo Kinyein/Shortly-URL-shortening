@@ -43,7 +43,7 @@
                         <a href="#resources" class="navbar-item"> Resources </a>
                     </div>
 
-                    <hr class="division">
+                    <hr class="division" />
 
                     <div class="navbar-end">
                         <div class="navbar-item">
@@ -80,15 +80,14 @@
 
             <div class="shorter">
                 <form id="form" autocomplete="off">
-                    <input id="urlInput" placeholder="Shorten a link here..."/>
+                    <input id="urlInput" placeholder="Shorten a link here..." />
                     <button>Shorten It!</button>
                     <p class="invalidUrl">Please add a link</p>
                 </form>
-
             </div>
 
             <div class="shortenedLinks" id="shortenedLinks">
-                <div class="link">
+                <!-- <div class="link">
                     <p class="linkItroduced">https://www.youtube.com/watch?v=XyjMQhUoWjQ</p>
 
                     <hr class="divisionLink">
@@ -98,20 +97,7 @@
 
                         <button id="https:/rel.ink/k4lKyk" class="copyButton">Copy</button>
                     </div>
-                </div>
-
-                <div class="link">
-                    <p class="linkItroduced">https://www3.animeflv.net/ver/kaguyasama-wa-kokurasetai-ultra-romantic-7</p>
-
-                    <hr class="divisionLink">
-
-                    <div class="shortenedLink">
-                        <p id="link">https:/rel.ink/k2uKyk</p>
-
-                        <button id="https:/rel.ink/k2uKyk" class="copyButton">Copy</button>
-                    </div>
-                </div>
-                
+                </div> -->
             </div>
 
             <div class="statistics" id="features">
@@ -176,7 +162,10 @@
             <div class="boost">
                 <h3>Boost your links today</h3>
 
-                <button onclick='scrollUp(0, -1)' class="getStartedButton button blueButton">
+                <button
+                    onclick="scrollUp(0, -1)"
+                    class="getStartedButton button blueButton"
+                >
                     Get Started
                 </button>
             </div>
@@ -185,32 +174,40 @@
         <footer class="footer" id="resources">
             <a class="shortly" href="#">Shortly</a>
 
-                <ul>
-                    <li><strong>Features</strong></li>
-                    <li><a href="">Link Shortening</a></li>
-                    <li><a href="">Branded Links</a></li>
-                    <li><a href="">Analytics</a></li>
-                </ul>
-                <ul>
-                    <li><strong>Resources</strong></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Developers</a></li>
-                    <li><a href="">Support</a></li>
-                </ul>
-                <ul>
-                    <li><strong>Company</strong></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Out Team</a></li>
-                    <li><a href="">Careers</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-    
-                <div class="socialIcons">
-                    <a href=""><i class="fa-brands fa-facebook-square"></i></a> 
-                    <a href=""><i class="fa-brands fa-twitter"></i></a> 
-                    <a href=""><i class="fa-brands fa-pinterest"></i></a> 
-                    <a href=""><i class="fa-brands fa-instagram"></i></a> 
-                </div>
+            <ul>
+                <li><strong>Features</strong></li>
+                <li>
+                    <a href="https://shrtco.de/docs/" target="_blank"
+                        >Link Shortening</a
+                    >
+                </li>
+                <li><a href="">Branded Links</a></li>
+                <li><a href="">Analytics</a></li>
+            </ul>
+            <ul>
+                <li><strong>Resources</strong></li>
+                <li><a href="">Blog</a></li>
+                <li>
+                    <a href="https://github.com/Kinyein" target="_blank"
+                        >Developers</a
+                    >
+                </li>
+                <li><a href="">Support</a></li>
+            </ul>
+            <ul>
+                <li><strong>Company</strong></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Out Team</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+
+            <div class="socialIcons">
+                <a href=""><i class="fa-brands fa-facebook-square"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
         </footer>
 
         <!-- FontAwesome (icons) -->
@@ -218,6 +215,8 @@
             src="https://kit.fontawesome.com/93cc0313c5.js"
             crossorigin="anonymous"
         ></script>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
         <script src="./script.js"></script>
     </body>

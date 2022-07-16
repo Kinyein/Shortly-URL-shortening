@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <hr class="divisionLink">
     
                         <div class="shortenedLink">
-                            <p id=${l.id}>${l.new}</p>
+                            <p>${l.new}</p>
     
                             <button id="${l.new}" class="copyButton">Copy</button>
                         </div>
@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (url.includes('https://')) {
             shortenUrl(url)
+            invalidUrl.style.display = 'none'
 
         } else {
             invalidUrl.style.display = 'block'
@@ -97,25 +98,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const scrollUp = (x, y) => {
-        window.scroll(x, y)
-    }
-
     const copyButtons = document.getElementsByClassName('copyButton')
 
     for (let i = 0; i < copyButtons.length; i++) {
         copyButtons[i].onclick = (e) => {
-            // console.log(e.target.id)
-            const urlToCopy = e.target.id
-            const textToCopy = document.getElementById('link');
+            copyButtons[i].textContent = 'Copied!'
+            copyButtons[i].style.backgroundColor = 'hsl(257, 27%, 26%)'
+            setTimeout(() => {
+                copyButtons[i].textContent = 'Copy'
+                copyButtons[i].style.backgroundColor = 'hsl(180, 66%, 49%)'
+            }, 3000)
+            
+            const urlToCopy = e.path[1].childNodes[1]
 
-            let seleccion = document.createRange();
-            seleccion.selectNodeContents(textToCopy);
+            let selection = document.createRange();
+            selection.selectNodeContents(urlToCopy);
             window.getSelection().removeAllRanges();
-            window.getSelection().addRange(seleccion);
+            window.getSelection().addRange(selection);
             let res = document.execCommand('copy');
-            window.getSelection().removeRange(seleccion);
+            window.getSelection().removeRange(selection);
         }
     }
 
 });
+
+const scrollUp = (x, y) => {
+    window.scroll(x, y)
+}

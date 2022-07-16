@@ -432,7 +432,7 @@ body main.main div.boost button {
 body footer.footer {
   background-color: hsl(260, 8%, 14%);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 2em;
   padding: 4% 7%;
@@ -448,8 +448,6 @@ body footer.footer a.shortly {
   color: white;
   font-size: 2.3em;
   font-weight: bold;
-  position: absolute;
-  left: 7%;
 }
 body footer.footer ul {
   font-size: 1.1em;

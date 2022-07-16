@@ -5,7 +5,9 @@ This challenge was created by [Frontend Mentor](https://www.frontendmentor.io/ho
 
 ## Result 
 
-You can see the result of the page [here](https://shortly-url-shortening-sigma.vercel.app)
+You can see all the result of the page [here](https://shortly-url-shortening-sigma.vercel.app)
+
+![image](https://user-images.githubusercontent.com/87722706/179370298-896aaa43-3b85-41da-bbdb-199f2a8e02b9.png)
 
 ## Set up
 

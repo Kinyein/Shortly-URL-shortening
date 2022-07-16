@@ -1,6 +1,6 @@
 # Shortly-URL-shortening
 
-A landing page built with HTML, LESS, and Vanilla JavaScript, you can shorten links and copy only clicking the copy button.
+A landing page built with HTML, LESS, and Vanilla JavaScript, in which you can shorten links and copy them clicking the copy button
 This challenge was created by [Frontend Mentor](https://www.frontendmentor.io/home)
 
 ## Result 
